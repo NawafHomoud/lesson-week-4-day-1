@@ -1,7 +1,7 @@
 * {
-  box-sizing: border-box;   
-  margin: 0px;  
-  padding: 0px;  
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 }
 
 header, main {
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -70,6 +70,8 @@ header nav > ul > li:nth-child(4) a:hover {
 main .column h2 {
   padding: 15px;
   color: white;
+  width: 100%;
+  border:2px solid black;
 }
 
 main .column:nth-child(1) h2 { background: rgb(126, 211, 33);}
@@ -78,4 +80,21 @@ main .column:nth-child(3) h2 { background: rgb(0, 174, 255); }
 
 main .column p {
   padding: 15px;
+}
+
+@media only screen and (max-width:960px) {
+  body{
+    background-color: red;
+  }
+  main{
+    width: 400px;
+    display: inline-block;
+  }
+  header nav > ul > li:nth-child(4) ul li {
+    width: 100%;
+    display: inline-block;
+  }
+  header nav > ul > li:nth-child(1) h1 {
+    font-size: 20px;
+  }
 }
